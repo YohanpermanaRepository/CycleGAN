@@ -33,7 +33,7 @@ def main():
     # Sidebar for selecting the pretrained model
     model_choice = st.sidebar.selectbox(
         "Select Pretrained Model",
-        ["Bali Corak Merah", "Bali Corak Coklat Kuning", "Bali Corak Biru", "Bali Corak Hijau"]
+        ["Bali Corak Merah"]
     )
     st.sidebar.write(f"You selected: {model_choice}")
     
@@ -137,3 +137,13 @@ def main():
 if __name__ == "__main__":
     main()
 
+
+    # Add external link at the bottom
+    st.markdown(
+        """
+        ---
+        **Kunjungi [situs resmi Batik Madura](https://www.contohsitusbatikmadura.com)** 
+        untuk informasi lebih lanjut tentang desain dan budaya Batik Madura.
+        """,
+        unsafe_allow_html=True
+    )
