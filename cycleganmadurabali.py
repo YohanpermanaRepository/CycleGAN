@@ -138,12 +138,12 @@ if __name__ == "__main__":
     main()
 
 
-    # Add external link at the bottom
-    st.markdown(
-        """
-        ---
-        **Kunjungi [situs resmi Batik Madura](https://www.contohsitusbatikmadura.com)** 
-        untuk informasi lebih lanjut tentang desain dan budaya Batik Madura.
-        """,
-        unsafe_allow_html=True
-    )
+    # # Add external link at the bottom
+    # st.markdown(
+    #     """
+    #     ---
+    #     **Kunjungi [situs resmi Batik Madura](https://www.contohsitusbatikmadura.com)** 
+    #     untuk informasi lebih lanjut tentang desain dan budaya Batik Madura.
+    #     """,
+    #     unsafe_allow_html=True
+    # )
