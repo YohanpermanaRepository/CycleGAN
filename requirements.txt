@@ -1,4 +1,4 @@
-streamlit>=1.0
-tensorflow==2.16.0  # Atau versi terbaru yang kompatibel
+streamlit
+tensorflow==2.16.0  
 Pillow
 numpy
