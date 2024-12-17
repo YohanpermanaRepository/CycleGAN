@@ -116,7 +116,12 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-
+import streamlit as st
+import tensorflow as tf
+from tensorflow.keras.preprocessing import image
+import numpy as np
+from PIL import Image
+import io
 
 # Load CycleGAN model weights
 @st.cache_resource
@@ -219,7 +224,7 @@ def main():
         
         # Initialize columns for displaying multiple images
         num_images = len(uploaded_files)
-        cols = st.columns(num_images)  # Create columns for each uploaded image
+        cols = st.columns(num_images)
         
         for i, uploaded_file in enumerate(uploaded_files):
             img_array, original_img = preprocess_image(uploaded_file)
@@ -231,10 +236,10 @@ def main():
             # Postprocess translated image
             translated_img = postprocess_image(prediction)
             
-            # Display images side by side with some space between them
+            # Display images side by side
             with cols[i]:
-                st.image(original_img, caption=f"Original Image {i + 1}", use_container_width=True)
-                st.image(translated_img, caption=f"Translated Image {i + 1}", use_container_width=True)
+                st.image(original_img, caption=f"Original Image {i + 1}", width=200)
+                st.image(translated_img, caption=f"Translated Image {i + 1}", width=200)
                 
                 # Option to save translated image
                 buf = io.BytesIO()
@@ -249,6 +254,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 # Add external link at the bottom with soft and elegant styling
 # Add external link at the bottom with soft and elegant styling
